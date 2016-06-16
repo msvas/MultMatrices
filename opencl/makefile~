@@ -1,0 +1,14 @@
+INCLUDE_PATH = $(AMDAPPSDKROOT)/include
+LIBRARY_PATH = $(AMDAPPSDKROOT)/lib/x86_64
+
+all: exmultmat exrandmat exmultmat3
+
+exmultmat:
+	g++ -g -O3 -Wall -std=c++11 -o multmat multmat.cpp -I$(INCLUDE_PATH) -L$(LIBRARY_PATH) -lOpenCL
+
+exmultmat3:
+	g++ -g -O3 -Wall -std=c++11 -o multmat3 multmat3.cpp -I$(INCLUDE_PATH) -L$(LIBRARY_PATH) -lOpenCL
+
+exrandmat:
+	g++ -g -O3 -Wall -std=c++11 -o randmat randmat.cpp
+
