@@ -1,6 +1,6 @@
 
 #include <utility>
-#define __NO_STD_VECTOR
+//#define __NO_STD_VECTOR
 #include <CL/cl.hpp>
 
 #include <cstdlib>
@@ -8,6 +8,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <chrono>
 
 #define CLDEVTYPE CL_DEVICE_TYPE_ALL 
 
@@ -103,7 +104,7 @@ void cl_print_device(cl::Device &dev){
 }
 
 void cl_init_plat_device(cl::Platform &plat, int platform_id, cl::Device device, int device_id){
-	cl::vector<cl::Platform> platforms;
+	vector<cl::Platform> platforms;
 	cl::Platform::get(&platforms);
 	cl_check_error(platforms.size()!=0 ? CL_SUCCESS : -1, "cl::Platform::get");
 
@@ -117,7 +118,7 @@ void cl_init_plat_device(cl::Platform &plat, int platform_id, cl::Device device,
 	cerr << "Using platform " << platform_id << endl;
 	plat = platforms[platform_id];
 
-	cl::vector<cl::Device> devices;
+	vector<cl::Device> devices;
 	plat.getDevices(CLDEVTYPE,&devices);
 	cl_check_error(devices.size()!=0 ? CL_SUCCESS : -1, "cl::Platform::getDevices");
 
@@ -139,7 +140,7 @@ cl::Context cl_create_context(cl::Device &device, cl::Platform &plat){
 	cl::Context context(CLDEVTYPE,cprops,NULL,NULL,&err);
 	cl_check_error(err, "Context::Context()"); 
 
-	cl::vector<cl::Device> devices;
+	vector<cl::Device> devices;
 	context.getInfo((cl_context_info)CL_CONTEXT_DEVICES,&devices);
 	device = devices[0];
 
@@ -165,7 +166,7 @@ cl::Program cl_make_program(string filename, cl::Context context){
 	cl::Program::Sources source(1,make_pair(code.c_str(),code.length()+1));
 	cl::Program program(context, source);
 
-	cl::vector<cl::Device> devices;
+	vector<cl::Device> devices;
 	context.getInfo((cl_context_info)CL_CONTEXT_DEVICES,&devices);
 
 	cl_int err = program.build(devices,"");
@@ -184,14 +185,18 @@ cl::Kernel cl_create_kernel(cl::Program program){
 
 int main(int argc, char **argv){
 	if (argc < 3)
-		return (cerr << "Usage: multmat mat1 mat2 [result only:(1|0)] [cl platform] [cl device]" << endl),1;
+		return (cerr << "Usage: multmat mat1 mat2 [result only:(1|0) supress:2] [cl platform] [cl device]" << endl),1;
+
+	auto start = std::chrono::system_clock::now();	
 
 	int platid = 0;
 	int deviceid = 0;
 	bool notresultonly = true;
+	bool noresult = false;
 
 	if (argc > 3){
 		notresultonly = (argv[3][0] == '0'); 
+		noresult = (argv[3][0] == '2');
 		if (argc>4){
 			platid = atoi(argv[4]);
 			if (argc>5) 
@@ -244,13 +249,19 @@ int main(int argc, char **argv){
 
 	queue.enqueueReadBuffer(vmatr,CL_TRUE,0,matsizer,matr.data.data());
 
-	if (notresultonly){
-		cout << "Mat 1" << endl;
-		print_mat(mat1);
-		cout << endl << "Mat 2" << endl;
-		print_mat(mat2);
-		cout << endl << "Result" << endl;
-	} else 
-		cout << matr.rows << " " << matr.cols << endl;
-	print_mat(matr);
+	if (!noresult){
+		if (notresultonly){
+			cout << "Mat 1" << endl;
+			print_mat(mat1);
+			cout << endl << "Mat 2" << endl;
+			print_mat(mat2);
+			cout << endl << "Result" << endl;
+		} else 
+			cout << matr.rows << " " << matr.cols << endl;
+		print_mat(matr);
+	}
+	
+	auto end = std::chrono::system_clock::now();
+	auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+	cerr << endl << "time: " << elapsed.count() << "ms" << endl;
 }

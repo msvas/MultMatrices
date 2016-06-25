@@ -12,12 +12,11 @@ void kernel multmat(global const float* A, global const float* B, global float* 
 	barrier(CLK_GLOBAL_MEM_FENCE);
 
 	int limit = log2((float)width);
-	for (int h=1;h<limit;++h)
+	for (int h=1;h<=limit;++h)
 		if (m < (width/pow(2,(float)h)))
 			C1[i*size + j*width + m] = C1[i*size + j*width + (2*m)] + C1[i*size + j*width + (2*m+1)];
 
 	barrier(CLK_GLOBAL_MEM_FENCE);
 
-	if (m==0)
-		C[i*width + j] = C1[i*width + j];
+	C[i*cols + j] = C1[i*size + j*width];
 }
