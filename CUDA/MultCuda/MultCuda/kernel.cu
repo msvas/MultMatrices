@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 
@@ -89,14 +90,17 @@ int main(int argc, char **argv) {
 	mat<float> mat1, mat2, matr;
 
 	if (argc < 3) {
-		printf("Usage: multmat mat1 mat2 [result only:(1|0)]");
-		return 0;
+		return (cerr << "Usage: multmat mat1 mat2 [result only:(1|0) supress:2]" << endl), 1;
 	}
 
+	auto start = std::chrono::system_clock::now();
+
 	bool notresultonly = true;
+	bool noresult = false;
 
 	if (argc > 3){
 		notresultonly = (argv[3][0] == '0');
+		noresult = (argv[3][0] == '2');
 	}
 
 	read_mat(argv[1], mat1);
@@ -117,16 +121,22 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-	if (notresultonly){
-		cout << "Mat 1" << endl;
-		print_mat(mat1);
-		cout << endl << "Mat 2" << endl;
-		print_mat(mat2);
-		cout << endl << "Result" << endl;
+	if (!noresult){
+		if (notresultonly){
+			cout << "Mat 1" << endl;
+			print_mat(mat1);
+			cout << endl << "Mat 2" << endl;
+			print_mat(mat2);
+			cout << endl << "Result" << endl;
+		}
+		else
+			cout << matr.rows << " " << matr.cols << endl;
+		print_mat(matr);
 	}
-	else
-		cout << matr.rows << " " << matr.cols << endl;
-	print_mat(matr);
+
+	auto end = std::chrono::system_clock::now();
+	auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+	cerr << endl << "time: " << elapsed.count() << "ms" << endl;
 
     return 0;
 }

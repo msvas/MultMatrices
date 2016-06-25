@@ -1,17 +1,17 @@
-﻿Build started 25/06/2016 20:12:42.
+﻿Build started 25/06/2016 20:33:26.
      1>Project "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\MultCuda.vcxproj" on node 2 (Build target(s)).
      1>AddCudaCompileDeps:
          D:\Microsoft Visual Studio 12.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu 
        CudaBuild:
          Compiling CUDA source file kernel.cu...
-         cmd.exe /C "C:\Users\Marcelo\AppData\Local\Temp\tmp7b072b0d614f447ea4b89a215379e943.cmd"
+         cmd.exe /C "C:\Users\Marcelo\AppData\Local\Temp\tmp77825fba8fc24ba39be4ac5b5cacdd4e.cmd"
          "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "D:\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu"
          
          D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "D:\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu" 
          kernel.cu
-     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(140): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(151): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
-     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(201): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
+     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(150): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
+     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(161): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
+     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(211): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
        Link:
          D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.lib" /MACHINE:X86 Debug\kernel.cu.obj
          MultCuda.vcxproj -> D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.exe
@@ -27,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:07.45
+Time Elapsed 00:00:07.44
