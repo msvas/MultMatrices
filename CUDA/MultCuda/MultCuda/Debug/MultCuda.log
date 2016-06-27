@@ -1,30 +1,30 @@
-﻿Build started 25/06/2016 20:33:26.
-     1>Project "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\MultCuda.vcxproj" on node 2 (Build target(s)).
+﻿Build started 27/06/2016 13:59:13.
+     1>Project "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\MultCuda\MultCuda.vcxproj" on node 2 (Build target(s)).
      1>AddCudaCompileDeps:
-         D:\Microsoft Visual Studio 12.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu 
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" /I. /FIcuda_runtime.h /c C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu 
        CudaBuild:
          Compiling CUDA source file kernel.cu...
-         cmd.exe /C "C:\Users\Marcelo\AppData\Local\Temp\tmp77825fba8fc24ba39be4ac5b5cacdd4e.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "D:\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu"
+         cmd.exe /C "C:\Users\msvas\AppData\Local\Temp\tmp966dd8f58f48457dbc4a4f97dac54190.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu"
          
-         D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "D:\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu" 
+         C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\MultCuda>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd " -o Debug\kernel.cu.obj "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\MultCuda\kernel.cu" 
          kernel.cu
-     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(150): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(161): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
-     1>D:/OneDrive/UFRGS/PDP/TF/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(211): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
+     1>C:/Users/msvas/Documents/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(150): warning C4244: 'initializing' : conversion from 'unsigned int' to 'float', possible loss of data
+     1>C:/Users/msvas/Documents/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(161): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
+     1>C:/Users/msvas/Documents/MultMatrices/CUDA/MultCuda/MultCuda/kernel.cu(211): warning C4244: 'argument' : conversion from 'float' to 'size_t', possible loss of data
        Link:
-         D:\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.lib" /MACHINE:X86 Debug\kernel.cu.obj
-         MultCuda.vcxproj -> D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\MultCuda.exe
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\MultCuda.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\MultCuda.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\MultCuda.lib" /MACHINE:X86 Debug\kernel.cu.obj
+         MultCuda.vcxproj -> C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\MultCuda.exe
        PostBuildEvent:
-         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\"
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\"
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\"
          :VCEnd
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart*.dll" "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\Debug\"
          C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart32_75.dll
          C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin\cudart64_75.dll
                  2 arquivo(s) copiado(s).
-     1>Done Building Project "D:\OneDrive\UFRGS\PDP\TF\MultMatrices\CUDA\MultCuda\MultCuda\MultCuda.vcxproj" (Build target(s)).
+     1>Done Building Project "C:\Users\msvas\Documents\MultMatrices\CUDA\MultCuda\MultCuda\MultCuda.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:07.44
+Time Elapsed 00:00:09.99
